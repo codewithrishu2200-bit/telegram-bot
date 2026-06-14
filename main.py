@@ -11,6 +11,12 @@ from telegram import ChatPermissions
 import os
 TOKEN = os.environ.get("BOT_TOKEN", "8683383164:AAFCxnpxReLC36SnsPG8U48-AGP4TK4AHDE")
 
+# Initialize missing files and folders to prevent FileNotFoundError on Railway
+os.makedirs("notesDATA", exist_ok=True)
+for file in ["data.txt", "data_all.txt", "datachat.txt"]:
+    if not os.path.exists(file):
+        open(file, "w").close()
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     name = update.effective_user.first_name
     userid = update.effective_user.id
