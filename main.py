@@ -29,7 +29,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"hello {name} bhai!!\n use /help to know what this bot can do..")
 
 
-async def help(update: Update , context:ContextTypes.DEAFAULT_TYPE):
+async def help(update: Update , context:ContextTypes.DEFAULT_TYPE):
 
     userid = update.effective_user.id
     with open("data_all.txt","r") as f:
