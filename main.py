@@ -209,7 +209,7 @@ async def gbroadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # ========= basic commands ==========
-async def hi(update: Update , context:ContextTypes.DEAFAULT_TYPE):
+async def hi(update: Update , context:ContextTypes.DEFAULT_TYPE):
 
     userid = update.effective_user.id
     with open("data_all.txt","r") as f:
@@ -228,7 +228,7 @@ async def hi(update: Update , context:ContextTypes.DEAFAULT_TYPE):
 
     await update.message.reply_text("namaste bro")
 
-async def bye(update: Update , context:ContextTypes.DEAFAULT_TYPE):
+async def bye(update: Update , context:ContextTypes.DEFAULT_TYPE):
 
     userid = update.effective_user.id
     with open("data_all.txt","r") as f:
@@ -247,7 +247,7 @@ async def bye(update: Update , context:ContextTypes.DEAFAULT_TYPE):
 
     await update.message.reply_text("bye bro....")
 
-async def luck(update: Update , context:ContextTypes.DEAFAULT_TYPE):
+async def luck(update: Update , context:ContextTypes.DEFAULT_TYPE):
 
     userid = update.effective_user.id
     with open("data_all.txt","r") as f:
@@ -269,7 +269,7 @@ async def luck(update: Update , context:ContextTypes.DEAFAULT_TYPE):
 
 #calculator
 
-async def sum(update: Update , context:ContextTypes.DEAFAULT_TYPE):
+async def sum(update: Update , context:ContextTypes.DEFAULT_TYPE):
 
     userid = update.effective_user.id
     with open("data_all.txt","r") as f:
