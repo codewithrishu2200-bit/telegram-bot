@@ -8,7 +8,8 @@ from telegram.ext import CallbackQueryHandler
 from telegram import ChatPermissions
 
 
-TOKEN = "8683383164:AAFCxnpxReLC36SnsPG8U48-AGP4TK4AHDE"
+import os
+TOKEN = os.environ.get("BOT_TOKEN", "8683383164:AAFCxnpxReLC36SnsPG8U48-AGP4TK4AHDE")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     name = update.effective_user.first_name
